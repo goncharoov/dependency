@@ -6,6 +6,11 @@ public class MovieFeedManager {
     private MovieItem[] movies = new MovieItem[0];
     private int countMovies = 10;
 
+    public MovieFeedManager() {}
+    public MovieFeedManager(int countMovies) {
+        this.countMovies = countMovies;
+    }
+
     public void add (MovieItem movie) {
         int length = movies.length + 1;
         MovieItem[] tmp = new MovieItem[length];
@@ -13,8 +18,8 @@ public class MovieFeedManager {
             tmp[i] = movies[i];
         }
 //        System.arraycopy(movies, 0, tmp, 0, movies.length);
-        int LastIndex = tmp.length - 1;
-        tmp[LastIndex] = movie;
+        int lastIndex = tmp.length - 1;
+        tmp[lastIndex] = movie;
         movies = tmp;
     }
 
