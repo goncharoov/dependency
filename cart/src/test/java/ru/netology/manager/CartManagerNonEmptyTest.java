@@ -30,7 +30,7 @@ public class CartManagerNonEmptyTest {
   @Test
   public void shouldNotRemoveIfNotExists() {
     CartManager manager = new CartManager();
-    int idToRemove = 4;
+    int idToRemove = 1;
     PurchaseItem first = new PurchaseItem(1, 1, "first", 1, 1);
     PurchaseItem second = new PurchaseItem(2, 2, "second", 1, 1);
     PurchaseItem third = new PurchaseItem(3, 3, "third", 1, 1);
@@ -41,7 +41,7 @@ public class CartManagerNonEmptyTest {
     manager.removeById(idToRemove);
 
     PurchaseItem[] actual = manager.getAll();
-    PurchaseItem[] expected = new PurchaseItem[]{third, second, first};
+    PurchaseItem[] expected = new PurchaseItem[]{third, second};
 
     assertArrayEquals(expected, actual);
   }
