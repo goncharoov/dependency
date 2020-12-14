@@ -17,4 +17,4 @@ jobs:
       with:
         java-version: 11
     - name: Build with Maven
-      run: mvn -B verify --file /home/runner/work/dependency/dependency/cart
+      run: mvn -B verify --file pom.xml
