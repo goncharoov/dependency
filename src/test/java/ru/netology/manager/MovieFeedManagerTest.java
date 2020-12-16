@@ -58,7 +58,7 @@ class MovieFeedManagerTest {
 
     @Test
     void shouldNotOutput() {
-        MovieFeedManager manager = new MovieFeedManager(0);
+        MovieFeedManager manager = new MovieFeedManager(5);
         MovieItem first = new MovieItem(1, 0, "Бладшот", "://1", "боевик");
         MovieItem second = new MovieItem(2, 1, "Вперед", "://2", "мультфильм");
         MovieItem third = new MovieItem(3, 2, "Отель 'Белград'", "://3", "комедия");
@@ -80,7 +80,7 @@ class MovieFeedManagerTest {
         manager.add(ninth);
         manager.add(tenth);
         MovieItem[] actual = manager.getAll();
-        MovieItem[] expected = new MovieItem[] {};
+        MovieItem[] expected = new MovieItem[] {tenth, ninth, eighth, seventh, sixth};
         assertArrayEquals(expected, actual);
     }
 }

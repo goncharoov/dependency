@@ -30,7 +30,7 @@ public class MovieFeedManager {
         } else {
             result = new MovieItem[movies.length];
         }
-        for (int i = 0; i < movies.length; i++) {
+        for (int i = 0; i < result.length; i++) {
             int index = movies.length - i - 1;
             result[i] = movies[index];
         }
