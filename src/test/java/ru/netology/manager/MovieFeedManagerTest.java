@@ -90,4 +90,5 @@ class MovieFeedManagerTest {
         MovieItem[] expected = new MovieItem[] {};
         assertArrayEquals(expected, actual);
     }
+
 }
