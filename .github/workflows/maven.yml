@@ -5,8 +5,10 @@ name: Java CI with Maven
 
 on:
   push:
-    branches:
-      - '*'
+    branches: [master, movie-feed]
+  pull_requests:
+    branches: [master]
+
 
 jobs:
   build:
